@@ -1,0 +1,55 @@
+{
+    "name": "webduonederland/pulse-api",
+    "description": "A package to retrieve Laravel Pulse data through API endpoints",
+    "type": "package",
+    "license": "MIT",
+    "require": {
+        "php": "^8.1",
+        "laravel/framework": "^10.0",
+        "laravel/pulse": "^1.0@beta"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.13",
+        "larastan/larastan": "^2.7",
+        "orchestra/testbench": "^8.0",
+        "phpunit/phpunit": "^10.5"
+    },
+    "authors": [
+        {
+            "name": "Finn Paes",
+            "email": "finn@webduo.nl"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "WebduoNederland\\PulseApi\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "WebduoNederland\\PulseApi\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "style": "pint",
+        "test": "phpunit",
+        "analyse": "phpstan",
+        "quality": [
+            "@style",
+            "@test",
+            "@analyse"
+        ]
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "WebduoNederland\\PulseApi\\PulseApiServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
