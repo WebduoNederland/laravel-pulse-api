@@ -9,7 +9,11 @@ class PulseApiServiceProvider extends ServiceProvider
 {
     public function boot(): void
     {
-        //
+        if ($this->app->runningInConsole()) {
+            $this->publishes([
+                __DIR__.'/../config/pulse-api.php' => config_path('pulse-api.php'),
+            ], 'config');
+        }
     }
 
     public function register(): void
