@@ -11,6 +11,6 @@ return [
 
     // If using the PulseApiAuthenticationMiddleware you can define multiple api tokens which can be used to access every Pulse api route
     'api_tokens' => [
-        'abcDEFghi123',
+        'privatetoken12345',
     ],
 ];

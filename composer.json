@@ -1,5 +1,5 @@
 {
-    "name": "webduonederland/pulse-api",
+    "name": "webduonederland/laravel-pulse-api",
     "description": "A package to retrieve Laravel Pulse data through API endpoints",
     "type": "package",
     "license": "MIT",
